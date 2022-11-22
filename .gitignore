@@ -1,0 +1,46 @@
+*.log
+*.pyc
+*.*~
+out
+classes/
+lps/
+
+# Gradle
+.gradle
+build/
+!bo/bo-ui/build/
+dist/
+local.properties
+local-aws.properties
+
+# Maven
+log/
+target/
+
+# IntelliJ
+.idea/
+.ipr
+*.iml
+*.iws
+
+# Eclipse
+.classpath
+.project
+.externalToolBuilders/
+.settings/
+bin/
+
+# Mac
+.DS_Store
+
+/.metadata
+
+# temp
+.git-old
+.git-bad
+~$*
+
+# proto-file generated documentation
+!src/main/doc/.gitkeep
+src/main/doc/**
+
