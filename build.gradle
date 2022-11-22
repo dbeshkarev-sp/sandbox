@@ -44,6 +44,7 @@ jib {
 		image = 'public.ecr.aws/docker/library/amazoncorretto:18-alpine3.16'
 	}
 	to {
+		image = "demo"
 		tags = [project.version]
 	}
 	container {
