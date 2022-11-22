@@ -26,8 +26,8 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
 
 apply plugin: "com.palantir.git-version"
-//def details = versionDetails()
-//version(details.lastTag + "." + details.commitDistance)
+def details = versionDetails()
+version(details.lastTag + "." + details.commitDistance)
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
@@ -43,8 +43,10 @@ jib {
 	from {
 		image = 'public.ecr.aws/docker/library/amazoncorretto:18-alpine3.16'
 	}
+	to {
+		tags = [project.version]
+	}
 	container {
-		ports = ['6565', '8081']
-		mainClass = 'co.saltpay.ledger.LedgerGrpcApplication'
+		mainClass = 'com.example.demo.DemoApplication'
 	}
 }
