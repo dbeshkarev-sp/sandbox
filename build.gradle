@@ -41,7 +41,7 @@ tasks.named('test') {
 apply plugin: "com.google.cloud.tools.jib"
 jib {
 	from {
-		image = 'public.ecr.aws/docker/library/amazoncorretto:18-alpine3.16'
+		image = 'amazoncorretto:18-alpine3.16'
 	}
 	to {
 		image = "$System.env.CONTAINER_REGISTRY/demo"
